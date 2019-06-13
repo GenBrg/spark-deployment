@@ -1,0 +1,4 @@
+- name: Install the package scala
+  apt:
+          name: scala
+  become: true

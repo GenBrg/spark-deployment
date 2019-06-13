@@ -1,0 +1,27 @@
+# Account name of remote user. Ansible will use this user account to ssh into
+# the managed machines. The user must be able to use sudo without asking
+# for password.
+ansible_connection: ssh
+ansible_user: spark
+ansible_ssh_private_key_file: ~/.ssh/id_rsa
+
+gather_facts: True
+gathering: smart
+
+# Tell ansible not to check host key
+host_key_checking: False
+
+# Installation folders
+install_temp_dir: /home/{{ ansible_user }}/tmp/ansible-install
+install_dir: /home/{{ ansible_user}}
+
+# Common packages
+install_java: False
+python_version: 2
+
+security:
+  enable_kerberos: False
+
+proxy_env:
+  http_proxy: http://child-prc.intel.com:913
+  https_proxy: http://child-prc.intel.com:913
