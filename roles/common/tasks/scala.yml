@@ -1,4 +1,5 @@
 - name: Install the package scala
-  apt:
+  package:
           name: scala
+          state: present
   become: true
