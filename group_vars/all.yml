@@ -16,7 +16,7 @@ install_temp_dir: /home/{{ ansible_user }}/tmp/ansible-install
 install_dir: /home/{{ ansible_user}}
 
 # Common packages
-install_java: False
+install_java: True
 python_version: 2
 
 security:

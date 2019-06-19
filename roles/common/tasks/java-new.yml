@@ -1,0 +1,5 @@
+- name: Install Java
+  package:
+          name: default-jdk
+          state: present
+  become: true

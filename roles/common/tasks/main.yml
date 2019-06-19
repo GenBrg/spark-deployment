@@ -10,7 +10,7 @@
 - name: create temporary install dir
   file: path="{{ install_temp_dir }}" state=directory
 
-- import_tasks: java.yml
+- import_tasks: java-new.yml
   when: "install_java == True"
 
   #- import_tasks: mirror.yml
